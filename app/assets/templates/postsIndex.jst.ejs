@@ -1,0 +1,9 @@
+<ul>
+<% posts.forEach( function(post){ %>
+  <li>
+    <a href="#/posts/<%= post.get("id") %>"><%= post.escape("title") %></a>
+    <button data-id="<%= post.get("id") %>" class="delete">delete</button>
+  </li>
+<% }); %>
+</ul>
+<a class="new" href="#/posts/new">Create A New Journal Page, Let Your Story Be Heard! </a>
